@@ -10,8 +10,11 @@
 
 body{
     font-family: 'Inter', sans-serif;
+   
 
 }
+
+
 
 
 
@@ -89,7 +92,49 @@ body{
 .about-section .card,
 .about-section .card img{
     border-radius: 0.625rem;
+    
 }
+
+
+.about-section .damn:hover{
+    opacity: 0.5;
+    border: 2px solid #555;
+
+}
+/* 
+.about-section .active{
+    opacity: 1;
+} */
+
+
+#slide-wrapper{
+    max-width: 500px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+#slider{
+    /* width: 440px; */
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+}
+
+
+.arrow{
+    width: 30px;
+    height: 30px;
+}
+
+.arrow:hover{
+    opacity: 5;
+    width: 35px;
+    height: 35px;
+}
+
+
 
 
 
@@ -129,6 +174,12 @@ del{
     
 
 }
+
+/* images */
+
+
+
+
 
 
 
@@ -237,5 +288,19 @@ label #icon{
 .prev-btn:hover,
 .next-btn:hover {
     color: hsl(205, 78%, 60%);
+}
+
+
+.mySlides {
+    display: none;
+}
+
+.imgs{
+    opacity: 0.6;
+}
+
+.active,
+.imgs:hover{
+    opacity: 1;
 }
 

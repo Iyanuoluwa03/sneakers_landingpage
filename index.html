@@ -19,6 +19,11 @@
     />
 
     <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
       integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
@@ -98,44 +103,93 @@
         <div class="container mt-5 first-wrapper">
           <div class="row gy-5 gx-5">
             <div class="col-lg-6">
-              <div class="card border-0">
-                <img src="./asset/images/sa.jpg" id="#shoe-img" class="img-fluid" />
+              <div class="mySlides card border-0">
+                <img
+                  src="./asset/images/img-2.jpg"
+                  id="featured"
+                  class="img-fluid"
+                />
               </div>
 
-              <div class="button-container">
-            <button class="prev-btn">
-              <i class="fas fa-chevron-left"></i>
-            </button>
+              <div class="mySlides card border-0">
+                <img
+                  src="./asset/images/img3.jpg"
+                  id="featured"
+                  class="img-fluid"
+                />
+              </div>
 
-            <button class="next-btn">
-              <i class="fas fa-chevron-right"></i>
-            </button>
-          </div>
+              <div class="mySlides card border-0">
+                <img
+                  src="./asset/images/img-2.jpg"
+                  id="featured"
+                  class="img-fluid"
+                />
+              </div>
 
-              <div class="row pt-3">
-                <div class="col">
-                  <div class="card">
-                    <img src="./asset/images/sb.jpg" class="img-fluid" />
+              <div class="mySlides card border-0">
+                <img
+                  src="./asset/images/img-1.jpg"
+                  id="featured"
+                  class="img-fluid"
+                />
+              </div>
+
+              <div id="slide-wrapper">
+                <img
+                  class="arrow"
+                  id="slideLeft"
+                  onclick="plusSlides(-1)"
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAItJREFUOE/t0kENgDAMQNE/B1hAAVjAARJwBkhAARaQggTSZLssgbYZO0HP3WvXNlAhQgWTH3VNtYnZ59Mrz0wF3CM2ALewFU1gD6zAVNqpC5RiWqdu0IIeQAdswGhdqdapzG6OS5HlSBE1NFQAN2xB3bAVzeH2jTtNc0z3uZTeqbqYPMHzfTP+cfQCTBgYFiZndUAAAAAASUVORK5CYII="
+                />
+
+                <div class="row pt-3" id="slider">
+                  <div class="col">
+                    <div class="card">
+                      <img
+                        src="./asset/images/img-2.jpg"
+                        class="imgs img-fluid"
+                        onclick="currentSlide(1)"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="card">
+                      <img
+                        src="./asset/images/img3.jpg"
+                        class="imgs img-fluid"
+                        onclick="currentSlide(2)"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="card">
+                      <img
+                        src="./asset/images/img-2.jpg"
+                        class="imgs img-fluid"
+                        onclick="currentSlide(3)"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="card">
+                      <img
+                        src="./asset/images/img-1.jpg"
+                        class="imgs img-fluid"
+                        onclick="currentSlide(4)"
+                      />
+                    </div>
                   </div>
                 </div>
-
-                <div class="col">
-                  <div class="card">
-                    <img src="./asset/images/sb.jpg" class="img-fluid" />
-                  </div>
-                </div>
-
-                <div class="col">
-                  <div class="card">
-                    <img src="./asset/images/sb.jpg" class="img-fluid" />
-                  </div>
-                </div>
-
-                <div class="col">
-                  <div class="card">
-                    <img src="./asset/images/sb.jpg" class="img-fluid" />
-                  </div>
-                </div>
+                <img
+                  class="arrow"
+                  id="slideRight"
+                  onclick="plusSlides(1)"
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAItJREFUOE/t00ERwkAMBdBXBSAFCUhAAjgARcVB6wAkIAUcMHuDDkx/Dr11z9m32Z9JZ4HTLWBa0SjVLZ5RJVGmO9xwwTWBk0E19I4NTgmcoK25EpyiJbiCxnAVPaLHC3s8fg2ugkZgeyRFYzBFDxjmvvwZQ9Jp26YR538ZTnNN0GSJvmpWtBzZ7IU32kcZFmt9GfsAAAAASUVORK5CYII="
+                />
               </div>
             </div>
 

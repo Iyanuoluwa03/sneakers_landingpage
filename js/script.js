@@ -46,69 +46,111 @@ signs.forEach(function(sign){
 
 
 
-// Slider
-
-// local data
-
-const slides = [
-  {
-    id: 1,
-    img: "./asset/images/sb.jpg",
-  },
-
-  {
-    id: 2,
-    img: "./asset/images/sb.jpg",
-  },
-
-
-   {
-    id: 2,
-    img: "./asset/images/sb.jpg",
-  },
-];
-
-// select item
-
-const imgs = document.getElementById("shoe-img");
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn')
-
-
-// starting item
-
-let firstItem = 0;
 
 
 
-// load initial item
+
+// let images = document.querySelectorAll('.imgs')
+
+// let activeImg = document.querySelector('.active');
+// let buttonRight = document.querySelector("#slideRight");
+// let buttonLeft = document.querySelector("#slideLeft");
 
 
-s = window.addEventListener('DOMContentLoaded', function(){
-    showItem();
-   
-});
+let slideIndex = 1;
+showSlides(slideIndex);
 
 
 
-// show based on data
+// next/prev
 
-function showItem(){
-const item = slides[firstItem];
-imgs = item.img;
-
+function plusSlides(n){
+    showSlides(slideIndex += n);
 }
-// show next item
-
-nextBtn.addEventListener('click', function(){
-    firstItem++;
-    if(firstItem > slides.length-1){
-        firstItem = 0
-    };
-
-    showItem()
 
 
-})
+//  image control
+
+function currentSlide(n){
+    showSlides(slideIndex = n);
+}
+
+
+
+function showSlides(n){
+    let i;
+    let slides = document.getElementsByClassName('mySlides');
+    let images = document.getElementsByClassName('imgs');
+
+    if (n > slides.length){
+        slideIndex = 1
+    }
+
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+
+
+    for (i = 0; i < slides.length; i++){
+        slides[i].style.display = 'none';
+    }
+
+
+    for (i = 0; i < images.length; i++) {
+        images[i].className = images[i].className.replace(" active", "");
+
+    }
+
+
+    slides[slideIndex-1].style.display = "block";
+    images[slideIndex-1].className += " active";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// for (var i=0; i<images.length; i++){
+//     images[i].addEventListener('mouseover', function(){
+//         // console.log('help')
+//         if(activeImg.length > 0){
+//             activeImg[0].classList.remove("active");
+//         }
+
+//         this.classList.add('active')
+//         document.getElementById('featured').src = this.src
+//     })
+// };
+
+
+
+
+// let {images: pic1, pic2, pic3, pic4} = images;
+
+// let mainImg = document.getElementById('featured');
+ 
+// let mainPic = 0;
+// buttonRight.addEventListener('click', function(){
+//     for(let i=1; i<5; i++){
+//         mainPic += 1;
+//         imgs.src = `./img ${mainPic}.jpg`;
+//         console.log('yeah')
+//     }
+// })
+
+
 
 
