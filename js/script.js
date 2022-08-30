@@ -123,6 +123,11 @@ function showSlides(n){
 
 
 
+
+
+
+
+
 // for (var i=0; i<images.length; i++){
 //     images[i].addEventListener('mouseover', function(){
 //         // console.log('help')
